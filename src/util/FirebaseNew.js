@@ -12,7 +12,7 @@ export class FirebaseNew{
             apiKey: "AIzaSyC_WAaGfbRsxU8iEwZ37gM__g_HyqrbyT0",
             authDomain: "whatsapp-clone-55584.firebaseapp.com",
             projectId: "whatsapp-clone-55584",
-            storageBucket: "whatsapp-clone-55584.appspot.com",
+            storageBucket: "gs://whatsapp-clone-55584.appspot.com",
             messagingSenderId: "816258402460",
             appId: "1:816258402460:web:3df195523c9e0f8f744559",
             measurementId: "G-GN3DWW19KH"
@@ -31,7 +31,7 @@ export class FirebaseNew{
     }
 
     
-    static getdb(){
+    /*static getdb(){
 
         const db = firebase.firestore();
 
@@ -41,18 +41,9 @@ export class FirebaseNew{
             });
         });
 
-    } 
+    } */
 
-    static db(){
-        return  firebase.firestore();
-    }
-
-    static hd(){
-
-        return  firebase.storage();
-
-    }
-
+   
     initAuth(){
          
         return new Promise((s, f)=>{
@@ -76,6 +67,16 @@ export class FirebaseNew{
             });
 
         });
+
+    }
+
+    static db(){
+        return  firebase.firestore();
+    }
+
+    static hd(){
+
+        return  firebase.storage();
 
     }
 
